@@ -33,7 +33,7 @@
     height: 100%;
     left: 0px;
     top: 0px;
-    background: url("./images/confetti-servicos.png") center / contain no-repeat;
+    background: url("../images/confetti-servicos.png") center / contain no-repeat;
     z-index: 0;
 }
 
@@ -114,4 +114,74 @@
     font-size: 1.2rem;
     color: var(--cor-texto);
     font-weight: 500;
+}
+
+
+@media (max-width: 500px) {
+
+    .servicos {
+        margin-top: 120px;
+        height: 580px;
+        overflow: hidden;
+    }
+
+    .servicos::before {
+        bottom: 200px; 
+        left: 10px;
+    }
+
+    .servicos::after {
+        background: url("../images/confetti-servicos.png") center / contain no-repeat;
+        z-index: -1;
+    }
+
+
+    .conteudo-servicos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .texto-servicos {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 0px;
+        gap: 20px;
+    }
+
+    .texto-servicos p {
+        font-size: 0.9rem;
+    }
+
+    .texto-servicos h2 {
+        font-size: 1.5rem;
+    }
+
+    .cards-area-2 {
+        padding-top: 15px;
+        gap: 15px;
+    }
+
+    .cards-servicos {
+        width: 145px;
+        height: 140px;
+    }
+
+    .card-conteudo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-conteudo img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .card-conteudo p {
+        font-size: 0.6rem;
+    }
+
 }
