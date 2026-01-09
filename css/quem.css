@@ -58,7 +58,7 @@
     height: 590px;
     left: -194px;
     top: -53px;
-    background: url("/images/grupo.svg") center / contain no-repeat;
+    background: url("../images/grupo.svg") center / contain no-repeat;
     z-index: -1;
 }
 
@@ -102,4 +102,67 @@
     position: absolute;
     left: 600px;
     top: 30px;
+}
+
+@media (max-width: 500px) {
+
+    .quem {
+        display: flex; /* Mudamos para flex para empilhar */
+        flex-direction: column; 
+        align-items: center;
+        margin-top: 40px;
+        gap: 40px;
+    }
+
+    .quem-texto {
+        width: 90%; /* Ocupa quase toda a largura */
+        text-align: center; /* Centralizar no mobile fica melhor */
+        align-items: center;
+    }
+
+    .quem-texto h1 {
+        font-size: 1.5rem;
+    }
+
+    .quem-texto p {
+        font-size: 1rem;
+    }
+
+    .quem-texto h1, .quem-texto p {
+        text-align: center;
+    }
+
+    .quem-botao {
+        width: 146px;
+        height: 46px;
+        font-size: 1rem;
+    }
+
+    .imagens-quem {
+        margin-left: 20px;
+    }
+
+    .imagens-quem img {
+        width: 240px; /* Tamanho fixo ou proporcional melhor */
+        height: 240px;
+    }
+
+    .imagens-quem::before {
+        display: block; /* Garante que está visível */
+        width: 300px;  /* Reduzimos o tamanho para o mobile */
+        height: 320px;
+        left: -100px;
+        top: -20px;
+    }
+
+    .imagens-quem::after {
+        width: 150px; 
+        height: 150px;
+    }
+
+    .quem-bg {
+        left: 50px;
+        top: 400px;
+    }
+
 }

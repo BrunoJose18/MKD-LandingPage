@@ -33,7 +33,7 @@
     height: 100%;
     left: 0px;
     top: 0px;
-    background: url("/images/confetti-servicos.png") center / contain no-repeat;
+    background: url("./images/confetti-servicos.png") center / contain no-repeat;
     z-index: 0;
 }
 
