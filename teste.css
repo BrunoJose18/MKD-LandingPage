@@ -1,0 +1,496 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.menu-button {
+  display: none;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.lista-nav {
+    display: flex;
+    gap: 65px;
+}
+
+.lista-nav li a {
+    color: var(--cor-texto);
+    font-size: 1.125rem;
+    position: relative;
+}
+
+.lista-nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--cor-primaria);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform ease 0.3s;
+}
+
+.lista-nav li a:hover::after {
+    transform: scaleX(1);
+}
+
+nav button {
+    background-color: #485EED;
+    font-size: 1.125rem;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding: 12px 42px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #5a6ff0;
+    box-shadow: 0 0 15px rgba(72, 94, 237, 0.7), 
+                0 0 30px rgba(72, 94, 237, 0.4);
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 500px) {
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    header img {
+        width: 83%;
+        height: 83%;
+    }
+
+    .nav-bar {
+        display: none; /* Esconde o menu original */
+    }
+
+    .lista-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .lista-nav li a{
+        font-size: 0.9rem;
+        color: #FFFFFF;
+    }
+
+    nav button {
+        background-color: var(--cor-primaria);
+        font-size: 1rem;
+        color: #FFFFFF;
+        padding: 8px 34px;
+    }
+
+    .menu-button {
+        display: flex; /* Agora ele aparece */
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--cor-primaria); /* Nome corrigido */
+        border: none;
+        border-radius: 50%;
+        z-index: 300;
+        cursor: pointer;
+    }
+
+    .menu-button span {
+        display: block;
+        height: 2px;
+        width: 20px;
+        background: #fff;
+        box-shadow: 0 7px 0 #fff, 0 -7px 0 #fff; /* Linhas do hambúrguer */
+    }
+
+    .menu-button:hover {
+        transition: 0.2s;
+        background-color: var(--cor-secundaria);
+    }
+
+    .nav-bar.active {
+        display: flex; /* Mostra o menu quando clicado */
+        flex-direction: column; /* Coloca os itens um abaixo do outro */
+        position: absolute;
+        top: 110px; /* Ajuste conforme a altura do seu header */
+        right: 30px;
+        background-color: var(--cor-secundaria);
+        padding: 20px;
+        border-radius: 10px;
+        gap: 20px;
+    }
+
+    .nav-bar.active::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        right: 5px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid var(--cor-secundaria);
+    }
+
+}
+
+.quem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.quem-texto {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+}
+
+.quem-texto h1 {
+    color: var(--cor-texto);
+    text-align: left;
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.quem-texto p {
+    color: #000000;
+    font-size: 1.5rem;
+    line-height: 1.18;
+}
+
+.quem-botao {
+    width: 186px;
+    height: 58px;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.imagens-quem {
+    margin-left: 80px;
+    position: relative;
+}
+
+.imagens-quem img {
+    width: 468px;
+    height: 468px;
+    position: relative;
+    z-index: 2;
+}
+
+.imagens-quem::before {
+    content: '';
+    position: absolute;
+    width: 366px;
+    height: 590px;
+    left: -194px;
+    top: -53px;
+    background: url("../images/grupo.svg") center / contain no-repeat;
+    z-index: -1;
+}
+
+.imagens-quem::after {
+    content: "";
+    position: absolute;
+    
+    width: 436px; 
+    height: 436px;
+    
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    box-shadow: 
+        0px 67px 138px 0px rgba(0, 0, 0, 0.07),
+        0px 24.74px 52.24px 0px rgba(0, 0, 0, 0.53),
+        0px 10.74px 24.44px 0px rgba(0, 0, 0, 0.0475),
+        0px 4.37px 11.51px 0px rgba(0, 0, 0, 0.0432),
+        0px 1.32px 4.8px 0px rgba(0, 0, 0, 0.0377),
+        0px 0.1px 1.41px 0px rgba(0, 0, 0, 0.028);
+    
+    z-index: 1;
+}
+
+.quem-bg-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 980px;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none; 
+}
+
+.quem-bg {
+    position: absolute;
+    left: 600px;
+    top: 30px;
+}
+
+@media (max-width: 500px) {
+
+    .quem {
+        display: flex; /* Mudamos para flex para empilhar */
+        flex-direction: column; 
+        align-items: center;
+        margin-top: 40px;
+        gap: 40px;
+    }
+
+    .quem-texto {
+        width: 90%; /* Ocupa quase toda a largura */
+        text-align: center; /* Centralizar no mobile fica melhor */
+        align-items: center;
+    }
+
+    .quem-texto h1 {
+        font-size: 1.5rem;
+    }
+
+    .quem-texto p {
+        font-size: 1rem;
+    }
+
+    .quem-texto h1, .quem-texto p {
+        text-align: center;
+    }
+
+    .quem-botao {
+        width: 146px;
+        height: 46px;
+        font-size: 1rem;
+    }
+
+    .imagens-quem {
+        margin-left: 20px;
+    }
+
+    .imagens-quem img {
+        width: 240px; /* Tamanho fixo ou proporcional melhor */
+        height: 240px;
+    }
+
+    .imagens-quem::before {
+        display: block; /* Garante que está visível */
+        width: 300px;  /* Reduzimos o tamanho para o mobile */
+        height: 320px;
+        left: -100px;
+        top: -20px;
+    }
+
+    .imagens-quem::after {
+        width: 150px; 
+        height: 150px;
+    }
+
+    .quem-bg {
+        left: 50px;
+        top: 400px;
+    }
+
+}
+
+.servicos {
+    position: relative;
+    margin-top: 250px;
+    width: 100%;
+    height: 774px;
+    background-color: #F6F8FB;
+    z-index: 0;
+}
+
+.servicos::before {
+    content: "";
+    position: absolute;
+    
+    width: 1000px;
+    height: 100px;
+    
+    background-color: rgba(0, 21, 133, 0.6);
+
+    bottom: 300px; 
+    left: 500px;
+    transform: translate(-50%, -50%) rotate(13.81deg);
+    
+    filter: blur(150px); 
+    
+    z-index: -1;
+    pointer-events: none;
+}
+
+.servicos::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: url("../images/confetti-servicos.png") center / contain no-repeat;
+    z-index: 0;
+}
+
+
+.conteudo-servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.texto-servicos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 0px;
+    gap: 20px;
+}
+
+.texto-servicos p {
+    font-size: 1.2rem;
+    color: #8A898E;
+    letter-spacing: 0.45em;
+}
+
+.texto-servicos h2 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.cards-servicos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+
+.cards-servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 287px;
+    height: 240px;
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    box-shadow: 
+        0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.0417),
+        0px 12.52px 10.02px 0px rgba(0, 0, 0, 0.035),
+        0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.0283),
+        0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.0197);
+}
+
+.card-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: flex-start;
+    padding:  10px 20px 0px 20px;
+    gap: 20px;
+}
+
+.card-conteudo p {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    font-weight: 500;
+}
+
+
+@media (max-width: 500px) {
+
+    .servicos {
+        margin-top: 120px;
+        height: 790px;
+        overflow: hidden;
+    }
+
+    .servicos::before {
+        bottom: 200px; 
+        left: 10px;
+    }
+
+    .servicos::after {
+        background: url("../images/confetti-servicos.png") center / contain no-repeat;
+        z-index: -1;
+    }
+
+
+    .conteudo-servicos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .texto-servicos {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 0px;
+        gap: 20px;
+    }
+
+    .texto-servicos p {
+        font-size: 1rem;
+    }
+
+    .texto-servicos h2 {
+        font-size: 1.5rem;
+    }
+
+    .cards-servicos {
+        width: 180px;
+        height: 140px;
+    }
+
+    .card-conteudo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-conteudo img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .card-conteudo p {
+        font-size: 0.6rem;
+    }
+
+}
