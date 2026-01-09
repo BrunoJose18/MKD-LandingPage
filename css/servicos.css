@@ -1,0 +1,32 @@
+.servicos {
+    margin-top: 250px;
+    width: 100%;
+    height: 774px;
+    background-color: #F6F8FB;
+}
+
+.conteudo-servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-conteudo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 0px;
+    gap: 20px;
+}
+
+.texto-conteudo p {
+    font-size: 1.2rem;
+    color: #8A898E;
+    letter-spacing: 0.4em;
+}
+
+.texto-conteudo h2 {
+    font-size: 3rem;
+    font-weight: 400;
+}

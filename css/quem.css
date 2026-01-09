@@ -1,0 +1,105 @@
+.quem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.quem-texto {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+}
+
+.quem-texto h1 {
+    color: var(--cor-texto);
+    text-align: left;
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.quem-texto p {
+    color: #000000;
+    font-size: 1.5rem;
+    line-height: 1.18;
+}
+
+.quem-botao {
+    width: 186px;
+    height: 58px;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.imagens-quem {
+    margin-left: 80px;
+    position: relative;
+}
+
+.imagens-quem img {
+    width: 468px;
+    height: 468px;
+    position: relative;
+    z-index: 2;
+}
+
+.imagens-quem::before {
+    content: '';
+    position: absolute;
+    width: 366px;
+    height: 590px;
+    left: -194px;
+    top: -53px;
+    background: url("/images/grupo.svg") center / contain no-repeat;
+    z-index: -1;
+}
+
+.imagens-quem::after {
+    content: "";
+    position: absolute;
+    
+    width: 436px; 
+    height: 436px;
+    
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    box-shadow: 
+        0px 67px 138px 0px rgba(0, 0, 0, 0.07),
+        0px 24.74px 52.24px 0px rgba(0, 0, 0, 0.53),
+        0px 10.74px 24.44px 0px rgba(0, 0, 0, 0.0475),
+        0px 4.37px 11.51px 0px rgba(0, 0, 0, 0.0432),
+        0px 1.32px 4.8px 0px rgba(0, 0, 0, 0.0377),
+        0px 0.1px 1.41px 0px rgba(0, 0, 0, 0.028);
+    
+    z-index: 1;
+}
+
+.quem-bg-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 980px;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none; 
+}
+
+.quem-bg {
+    position: absolute;
+    left: 600px;
+    top: 30px;
+}
