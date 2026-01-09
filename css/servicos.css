@@ -167,3 +167,20 @@
     }
 
 }
+
+@media (max-width: 440px) {
+
+    .servicos {
+        height: 750px;
+    }
+
+    .cards-servicos-container {
+        gap: 20px;
+    }
+
+    .servicos::after {
+        left: -10px;
+        top: -50px;
+    }
+
+}
