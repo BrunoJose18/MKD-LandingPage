@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.texto-conteudo {
+.texto-servicos {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -20,13 +20,64 @@
     gap: 20px;
 }
 
-.texto-conteudo p {
+.texto-servicos p {
     font-size: 1.2rem;
     color: #8A898E;
     letter-spacing: 0.4em;
 }
 
-.texto-conteudo h2 {
+.texto-servicos h2 {
     font-size: 3rem;
     font-weight: 400;
+}
+
+.cards-servicos-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cards-area-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards-area-2 {
+    display: flex;
+    padding-top: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.cards-servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 287px;
+    height: 240px;
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    box-shadow: 
+        0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.0417),
+        0px 12.52px 10.02px 0px rgba(0, 0, 0, 0.035),
+        0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.0283),
+        0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.0197);
+}
+
+.card-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: flex-start;
+    padding:  30px 20px 0px 20px;
+    gap: 20px;
+}
+
+.card-conteudo p {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    font-weight: 500;
 }
