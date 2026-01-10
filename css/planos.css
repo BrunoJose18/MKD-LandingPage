@@ -1,0 +1,331 @@
+.planos {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: 1300px;
+    background-color: #F6F8FB;
+    z-index: 0;
+}
+
+.planos::before {
+    content: "";
+    position: absolute;
+    
+    width: 1000px;
+    height: 500px;
+    
+    background-color: rgba(0, 21, 133, 0.1);
+
+    bottom: 0px; 
+    left: 600px;
+    transform: translate(-50%, -50%) rotate(13.81deg);
+    
+    filter: blur(150px); 
+    
+    z-index: -1;
+    pointer-events: none;
+}
+
+.planos::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: url("../images/confetti-planos.png") center / contain no-repeat;
+    z-index: -1;
+}
+
+
+.conteudo-planos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.texto-planos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0px;
+    gap: 20px;
+}
+
+#planos-titulo {
+    font-size: 1.2rem;
+    color: #8A898E;
+    letter-spacing: 0.45em;
+}
+
+.texto-planos p {
+    font-size: 1.25rem;
+    color: var(--cor-texto);
+    line-height: 1.4;
+    width: 462px;
+}
+
+.texto-planos h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.cards-planos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 110px;
+    width: 100%;
+}
+
+.cards-planos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 410px;
+    height: 844px;
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-planos-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding:  50px 20px;
+    gap: 20px;
+    width: 85%;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+}
+
+.card-header button {
+    width: 137px;
+    height: 38px;
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 28px;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+}
+
+.sub-texto {
+    font-size: 0.8rem;
+    color: var(--cor-texto);
+    font-weight: 400;
+}
+
+.card-header h2 {
+    font-size: 2rem;
+    color: var(--cor-texto);
+}
+
+.preco-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #001585;
+    font-weight: 700;
+    position: relative;
+    padding: 30px 0px;
+    width: 100%;
+}
+
+.valor-grupo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.valor {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.moeda {
+    font-size: 1.35rem;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+.sufixo {
+    font-size: 1.25rem;
+    margin-top: 30px;
+    margin-left: 4px;
+}
+
+.preco-container:before,
+.preco-container:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 350px;
+    height: 1px;
+    background-color: rgba(0, 21, 133, 0.37);
+}
+
+.preco-container:before {
+    bottom: 0;
+}
+
+.preco-container:after {
+    top: 0;
+}
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.beneficios li {
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.beneficios li bold{
+    font-weight: 700;
+}
+
+.beneficios li:before {
+    content: '';
+    position: absolute;
+    width: 10.38px;
+    height: 10.38px;
+    left: -20px;
+    bottom: 8px;
+    background: url("../images/icons/estrela.svg") center / contain no-repeat;
+}
+
+.planos-botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 30px;
+    gap: 20px;
+}
+
+.planos-botoes button {
+    width: 269px;
+    height: 56px;
+    padding: 14px 8px;
+}
+
+#fale {
+    background-color: #FFFFFF;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 28px;
+    font-size: 1rem;
+    color: #000000;
+    cursor: pointer;
+}
+
+#eu-quero {
+    background-color: var(--cor-primaria);
+    border-radius: 28px;
+    border: none;
+    font-size: 1rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+@media (max-width: 500px) {
+
+    .planos {
+        margin-top: 120px;
+        height: 790px;
+        overflow: hidden;
+    }
+
+    .planos::before {
+        bottom: 200px; 
+        left: 10px;
+    }
+
+    .planos::after {
+        background: url("../images/confetti-planos.png") center / contain no-repeat;
+        z-index: -1;
+    }
+
+
+    .conteudo-planos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .texto-planos {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 0px;
+        gap: 20px;
+    }
+
+    .texto-planos p {
+        font-size: 1rem;
+    }
+
+    .texto-planos h2 {
+        font-size: 1.5rem;
+    }
+
+    .cards-planos {
+        width: 180px;
+        height: 140px;
+    }
+
+    .card-conteudo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-conteudo img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .card-conteudo p {
+        font-size: 0.6rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .planos {
+        height: 750px;
+    }
+
+    .cards-planos-container {
+        gap: 20px;
+    }
+
+    .planos::after {
+        left: -10px;
+        top: -50px;
+    }
+
+}

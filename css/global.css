@@ -7,6 +7,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+button, input, select, textarea {
+    font-family: inherit;
+}
+
 :root {
   --cor-primaria: #001585;
   --cor-secundaria: #485EED;
