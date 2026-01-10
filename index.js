@@ -28,3 +28,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+// ===== CARROSSEL =====
+const slideTrack = document.querySelector(".carousel-slide");
+const slides = document.querySelectorAll(".carousel-conteudo");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+
+let index = 0;
+
+function updateCarousel() {
+  // Pegamos a largura exata do container visível no momento
+  const viewportWidth = document.querySelector(".carousel-viewport").offsetWidth;
+  
+  // O deslocamento é simplesmente o índice vezes a largura total (100%)
+  // Se houver GAP no CSS, precisamos somar o gap ao viewportWidth
+  const style = window.getComputedStyle(slideTrack);
+  const gap = parseInt(style.gap) || 0;
+  
+  const moveDistance = index * (viewportWidth + gap);
+
+  slideTrack.style.transform = `translateX(-${moveDistance}px)`;
+}
+
+next.addEventListener("click", () => {
+  if (index < slides.length - 1) {
+    index++;
+  } else {
+    index = 0; // Volta ao primeiro
+  }
+  updateCarousel();
+});
+
+prev.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+  } else {
+    index = slides.length - 1; // Vai ao último
+  }
+  updateCarousel();
+});
+
+// Essencial para manter o alinhamento ao girar o celular ou redimensionar a tela
+window.addEventListener("resize", updateCarousel);
+
+// Inicializa
+updateCarousel();
