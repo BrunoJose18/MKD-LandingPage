@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link 
+    rel="icon" 
+    type="image/svg+xml" 
+    href="./images/icons/favicon.svg" 
+    />
     <title>MKD Pedro Torres</title>
 </head>
 <body>
@@ -19,10 +24,10 @@
         <nav class="nav-bar">
 
             <ul class="lista-nav">
-                <li><a href="">Quem sou</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Planos</a></li>
-                <li><a href="">Feedbacks</a></li>
+                <li><a href="#quem">Quem sou</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#feedbacks">Feedbacks</a></li>
             </ul>
 
             <button>Contato</button>
@@ -38,7 +43,7 @@
     <main>
 
 
-        <section class="quem container">
+        <section id="quem" class="quem container">
 
             <div class="quem-texto">
 
@@ -58,7 +63,7 @@
         </section>
 
 
-        <section class="servicos">
+        <section id="servicos" class="servicos">
 
             <div class="conteudo-servicos container">
 
@@ -159,7 +164,7 @@
 
         </section>
 
-        <section class="planos">
+        <section id="planos" class="planos">
 
             <div class="conteudo-planos container">
 
@@ -253,7 +258,7 @@
 
         </section>
 
-        <section class="feedback">
+        <section id="feedbacks" class="feedback">
 
             <div class="feedback-bg-div"><img class="feedback-bg" src="./images/confetti-feedback.svg" alt=""></div>
             <div class="feedback-conteudo container">
@@ -314,9 +319,47 @@
     <footer>
 
         <div class="footer-img">
-            <h1>Pronto para alavancar seu negócio?</h1>
-            <button>Entrar em contato</button>
+            <div class="footer-texto">
+                <h1>Pronto para alavancar seu negócio?</h1>
+                <button>Entrar em contato<img src="./images/icons/arrow-right.png" alt=""></button>
+            </div>
         </div>
+
+        <div class="footer-conteudo container">
+
+                <div class="footer-conteudo-texto">
+                    <img src="./images/logo-pedro 1.svg" alt="">
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <div class="footer-redes">
+                        <a href=""><img src="./images/icons/insta.svg" alt="">@mkdpedrotorres</a>
+                        <a href=""><img src="./images/icons/facebook.svg" alt="">@face</a>
+                   </div>
+                </div>
+
+                <div class="footer-link-grupo">
+
+                    <div class="links">
+                        <h3>Navegação</h3>
+                        <ul class="links-lista">
+                            <li><a href="#quem">Quem Sou</a></li>
+                            <li><a href="#servicos">Serviços</a></li>
+                            <li><a href="#planos">Planos</a></li>
+                            <li><a href="#feedbacks">Feedbacks</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links">
+                        <h3>Contato</h3>
+                        <ul class="links-lista">
+                            <li><img src="./images/icons/telefone.svg" alt=""><a href="">(xx) x xxxx-xxxx</a></li>
+                            <li><img src="./images/icons/dashicons_email.svg" alt=""><a href="">mkd@mkd</a></li>
+                            <li><img src="./images/icons/localizacao.svg" alt=""><a href="">Caruaru - PE</a></li>
+                        </ul>
+                    </div>
+
+                </div>
 
     </footer>
 

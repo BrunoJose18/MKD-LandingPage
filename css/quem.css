@@ -39,6 +39,13 @@
     cursor: pointer;
 }
 
+.quem-botao:hover {
+    background-color: #5a6ff0;
+    box-shadow: 0 0 15px rgba(72, 94, 237, 0.7), 
+                0 0 30px rgba(72, 94, 237, 0.4);
+    transform: scale(1.05);
+}
+
 .imagens-quem {
     margin-left: 80px;
     position: relative;

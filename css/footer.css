@@ -1,6 +1,148 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer-img {
     width: 1408px;
     height: 235px;
     border-radius: 30px;
     background-color: var(--cor-secundaria);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.footer-texto {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.footer-texto h1 {
+    font-size: 3.6rem;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.footer-texto button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 56px;
+    padding: 10px 16px;
+    background-color: #FFFFFF;
+    border-radius: 70px;
+    border: none;
+    color: var(--cor-texto);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.footer-texto button img {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+.footer-img:after {
+    content: '';
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../images/footer-bg.png") center / contain no-repeat;
+    z-index: -1;
+}
+
+.footer-conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.footer-conteudo-texto {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 40px;
+}
+
+.footer-conteudo-texto img {
+    width: 196px;
+    height: 118px;
+}
+
+.footer-redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer-redes a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.footer-redes img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.footer-link-grupo {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.links-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.links-lista li {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 10px;
+    list-style: none;
+}
+
+.links-lista li a {
+    color: var(--cor-texto);
+    font-size: 0.9rem;
+}
+
+.links-lista li img {
+    width: 24px;
+    height: 24px;
+}
+
+footer a:hover {
+    color: var(--cor-secundaria);
 }

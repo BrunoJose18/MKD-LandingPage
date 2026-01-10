@@ -17,6 +17,9 @@ button, input, select, textarea {
   --cor-texto: #0B1B35;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 h1, h2, h3, ul,
 li, p, dd, dt {
