@@ -78,7 +78,7 @@ updateCarousel();
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Seleciona os elementos
+  
     const container = document.querySelector('.cards-planos-container');
     const cards = document.querySelectorAll('.cards-planos');
     const indicadores = document.querySelectorAll('.indicador');
@@ -109,5 +109,39 @@ document.addEventListener("DOMContentLoaded", () => {
     // Manda o observador vigiar cada card
     cards.forEach(card => {
         observer.observe(card);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    // --- LÓGICA PARA FEEDBACKS ---
+    const feedContainer = document.querySelector('.carousel-viewport');
+    // Nota: Pegamos o 'carousel-conteudo' pois o 'carousel-slide' está invisível com display:contents
+    const feedCards = document.querySelectorAll('.carousel-conteudo'); 
+    const feedIndicadores = document.querySelectorAll('.indicador-feed');
+
+    const feedObserverOptions = {
+        root: feedContainer,
+        threshold: 0.5
+    };
+
+    const feedObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Descobre qual card está visível
+                const index = Array.from(feedCards).indexOf(entry.target);
+                
+                // Limpa todos
+                feedIndicadores.forEach(ind => ind.classList.remove('ativo'));
+                
+                // Ativa o correto
+                if(feedIndicadores[index]) {
+                    feedIndicadores[index].classList.add('ativo');
+                }
+            }
+        });
+    }, feedObserverOptions);
+
+    feedCards.forEach(card => {
+        feedObserver.observe(card);
     });
 });
