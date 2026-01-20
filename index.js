@@ -75,3 +75,39 @@ window.addEventListener("resize", updateCarousel);
 
 // Inicializa
 updateCarousel();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Seleciona os elementos
+    const container = document.querySelector('.cards-planos-container');
+    const cards = document.querySelectorAll('.cards-planos');
+    const indicadores = document.querySelectorAll('.indicador');
+
+    // Configuração do Observador
+    const observerOptions = {
+        root: container,   // Quem é a janela de rolagem?
+        threshold: 0.5     // Ativa quando 50% do card estiver visível
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Descobre qual é o índice do card que apareceu (0 ou 1)
+                const index = Array.from(cards).indexOf(entry.target);
+                
+                // Remove a classe 'ativo' de todos os indicadores
+                indicadores.forEach(ind => ind.classList.remove('ativo'));
+                
+                // Adiciona a classe 'ativo' apenas no indicador correspondente
+                if(indicadores[index]) {
+                    indicadores[index].classList.add('ativo');
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Manda o observador vigiar cada card
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+});

@@ -248,6 +248,25 @@
     cursor: pointer;
 }
 
+.indicadores-container {
+    display: none; 
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.indicador {
+    width: 40px;
+    height: 6px; 
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.indicador.ativo {
+    background-color: #007bff;
+}
+
 @media (max-width: 1024px) {
 
 }
@@ -260,7 +279,7 @@
 
     .planos {
         margin-top: 120px;
-        height: 790px;
+        height: 1000px;
         overflow: hidden;
     }
 
@@ -268,12 +287,6 @@
         bottom: 200px; 
         left: 10px;
     }
-
-    .planos::after {
-        background: url("../images/confetti-planos.png") center / contain no-repeat;
-        z-index: -1;
-    }
-
 
     .conteudo-planos {
         display: flex;
@@ -299,23 +312,136 @@
         font-size: 1.5rem;
     }
 
-    .cards-planos {
-        width: 180px;
-        height: 140px;
+    .cards-planos-container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 30px;
+        padding: 20px 5%;
+        scrollbar-width: none;
     }
 
-    .card-conteudo {
+    .cards-planos {
+        min-width: 90%;
+        max-width: 90%;
+        height: 620px;
+        
+        scroll-snap-align: center;
+    }
+
+    .card-header button {
+        width: 110px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+
+    .sub-texto {
+        font-size: 0.75rem;
+    }
+
+    .card-header h2 {
+        font-size: 1.4rem;
+        color: var(--cor-texto);
+    }
+
+    .preco-container {
+        padding: 30px 0px;
+    }
+
+    .valor {
+        font-size: 2.6rem;
+    }
+
+    .moeda {
+        font-size: 1.08rem;
+        margin-top: 4px;
+        margin-right: 4px;
+    }
+
+    .sufixo {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+    .preco-container:before,
+    .preco-container:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 350px;
+        height: 1px;
+        background-color: rgba(0, 21, 133, 0.37);
+    }
+
+    .preco-container:before {
+        bottom: 0;
+    }
+
+    .preco-container:after {
+        top: 0;
+    }
+
+    .beneficios {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding-top: 10px;
+        width: 100%;
     }
 
-    .card-conteudo img {
-        width: 40%;
-        height: 40%;
+    .beneficios li {
+        position: relative;
+        font-size: 1rem;
     }
 
-    .card-conteudo p {
-        font-size: 0.6rem;
+    .beneficios li:before {
+        width: 9px;
+        height: 9px;
+    }
+
+    .planos-botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 30px;
+        gap: 20px;
+    }
+
+    .planos-botoes button {
+        width: 188px;
+        height: 39px;
+        padding: 5px 8px;
+    }
+
+    #fale {
+        background-color: #FFFFFF;
+        border: 2px solid var(--cor-primaria);
+        border-radius: 28px;
+        font-size: 0.9rem;
+        color: #000000;
+        cursor: pointer;
+    }
+
+    #eu-quero {
+        background-color: var(--cor-primaria);
+        border-radius: 28px;
+        border: none;
+        font-size: 0.9rem;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .cards-planos-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .indicadores-container {
+        display: flex;
     }
 
 }

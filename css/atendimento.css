@@ -460,6 +460,7 @@
     .atendimento {
         margin-top: 40px;
         height: 1330px;
+        overflow: hidden;
     }
 
     .atendimento:before {
@@ -531,7 +532,7 @@
     .atendimento-etapa span {
         display: inline-block;
         position: relative;
-        padding-right: 15px;
+        padding-right: 10px;
     }
 
     .atendimento-etapa span img{
