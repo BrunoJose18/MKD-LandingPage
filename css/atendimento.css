@@ -148,3 +148,431 @@
     margin-top: 20px;
     font-weight: 300;
 }
+
+@media (max-width: 1024px) {
+    .atendimento {
+    margin-top: 180px;
+    position: relative;
+}
+
+.atendimento:before {
+    content: '';
+    position: absolute;
+    width: 1440px;
+    height: 1021px;
+    left: 40px;
+    top: -150px;
+    background: url("../images/bg-atendimento.png") center / contain no-repeat;
+    z-index: -1;
+}
+
+.atendimento-textos {
+    display: flex;
+    height: 260px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.atendimento-texto-1 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    width: 606px;
+}
+
+.atendimento-texto-1 p {
+    font-size: 1rem;
+    color: var(--cor-primaria);
+}
+
+.atendimento-texto-1 h1 {
+    font-size: 3rem;
+    line-height: 1.16;
+    color: var(--cor-texto);
+}
+
+.atendimento-texto-2 {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding-top: 120px;
+}
+
+.atendimento-texto-2 p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: var(--cor-texto);
+    font-weight: 300;
+}
+
+.atendimento-texto-2 button {
+    width: 149px;
+    height: 56px;
+    padding: 14px 8px;
+    background-color: var(--cor-secundaria);
+    border: none;
+    border-radius: 10px;
+    color: #111204;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 43px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.atendimento-texto-2 button:hover {
+    box-shadow: 0 0 15px rgba(72, 94, 237, 0.7), 
+                0 0 30px rgba(72, 94, 237, 0.4);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.atendimento-processo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 230px;
+}
+
+.atendimento-etapa {
+    display: flex;
+    flex-direction: column;
+    width: 283px;
+    overflow: visible;
+}
+
+.atendimento-etapa span {
+    display: inline-block;
+    position: relative;
+    padding-left: 10px;
+}
+
+.atendimento-etapa span img{
+    position: relative;
+    z-index: 2;
+}
+
+.atendimento-etapa span:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    width: 93px;
+    height: 93px;
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.atendimento-etapa:nth-child(2) span:before {
+    left: -7.7px;
+    top: -26px;
+}
+
+.atendimento-etapa span:after {
+    content: '';
+    position: absolute;
+    left: 53px;
+    top: 18px;
+    width: 324px;
+    height: 12px;
+    background: url('../images/seta.png') center / contain no-repeat;
+    z-index: 1;
+}
+
+.atendimento-etapa:nth-child(3) span:after {
+    display: none;
+}
+
+.atendimento-etapa h3 {
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+    margin-top: 90px;
+    font-weight: 500;
+}
+
+.atendimento-etapa p {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: var(--cor-texto);
+    margin-top: 20px;
+    font-weight: 300;
+}
+}
+
+@media (max-width: 768px) {
+    .atendimento {
+    margin-top: 180px;
+    position: relative;
+}
+
+.atendimento:before {
+    content: '';
+    position: absolute;
+    width: 1440px;
+    height: 1021px;
+    left: 40px;
+    top: -150px;
+    background: url("../images/bg-atendimento.png") center / contain no-repeat;
+    z-index: -1;
+}
+
+.atendimento-textos {
+    display: flex;
+    height: 260px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.atendimento-texto-1 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    width: 606px;
+}
+
+.atendimento-texto-1 p {
+    font-size: 1rem;
+    color: var(--cor-primaria);
+}
+
+.atendimento-texto-1 h1 {
+    font-size: 3rem;
+    line-height: 1.16;
+    color: var(--cor-texto);
+}
+
+.atendimento-texto-2 {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding-top: 120px;
+}
+
+.atendimento-texto-2 p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: var(--cor-texto);
+    font-weight: 300;
+}
+
+.atendimento-texto-2 button {
+    width: 149px;
+    height: 56px;
+    padding: 14px 8px;
+    background-color: var(--cor-secundaria);
+    border: none;
+    border-radius: 10px;
+    color: #111204;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 43px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.atendimento-texto-2 button:hover {
+    box-shadow: 0 0 15px rgba(72, 94, 237, 0.7), 
+                0 0 30px rgba(72, 94, 237, 0.4);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.atendimento-processo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 230px;
+}
+
+.atendimento-etapa {
+    display: flex;
+    flex-direction: column;
+    width: 283px;
+    overflow: visible;
+}
+
+.atendimento-etapa span {
+    display: inline-block;
+    position: relative;
+    padding-left: 10px;
+}
+
+.atendimento-etapa span img{
+    position: relative;
+    z-index: 2;
+}
+
+.atendimento-etapa span:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    width: 93px;
+    height: 93px;
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.atendimento-etapa:nth-child(2) span:before {
+    left: -7.7px;
+    top: -26px;
+}
+
+.atendimento-etapa span:after {
+    content: '';
+    position: absolute;
+    left: 53px;
+    top: 18px;
+    width: 324px;
+    height: 12px;
+    background: url('../images/seta.png') center / contain no-repeat;
+    z-index: 1;
+}
+
+.atendimento-etapa:nth-child(3) span:after {
+    display: none;
+}
+
+.atendimento-etapa h3 {
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+    margin-top: 90px;
+    font-weight: 500;
+}
+
+.atendimento-etapa p {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: var(--cor-texto);
+    margin-top: 20px;
+    font-weight: 300;
+}
+}
+
+@media (max-width: 500px) {
+
+    .atendimento {
+        margin-top: 40px;
+        height: 1330px;
+    }
+
+    .atendimento:before {
+        width: 1440px;
+        height: 1021px;
+        left: -80px;
+        top: 150px;
+    }
+
+    .atendimento-textos {
+        height: 460px;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .atendimento-texto-1 {
+        text-align: center;
+        gap: 20px;
+        width: 390px;
+    }
+
+    .atendimento-texto-1 p {
+        font-size: 0.8rem;
+    }
+
+    .atendimento-texto-1 h1 {
+        font-size: 1.5rem;
+        line-height: 1.16;
+        color: var(--cor-texto);
+    }
+
+    .atendimento-texto-2 {
+        width: 390px;
+        padding-top: 80px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .atendimento-texto-2 p {
+        font-size: 1rem;
+    }
+
+    .atendimento-texto-2 button {
+        width: 119px;
+        height: 44px;
+        padding: 8px 7px;
+    }
+
+    .atendimento-processo {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    .atendimento-etapa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 70px;
+        width: 283px;
+    }
+
+    .atendimento-etapa span {
+        display: inline-block;
+        position: relative;
+        padding-right: 15px;
+    }
+
+    .atendimento-etapa span img{
+        width: 40px;
+        height: 40px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .atendimento-etapa span:before {
+        content: '';
+        position: absolute;
+        left: -7px;
+        top: -16px;
+        width: 73px;
+        height: 73px;
+        background-color: var(--cor-secundaria);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .atendimento-etapa:nth-child(2) span:before {
+        left: -7px;
+        top: -20px;
+    }
+
+    .atendimento-etapa span:after {
+        display: none;
+    }
+
+    .atendimento-etapa h3 {
+        font-size: 1.25rem;
+        color: var(--cor-texto);
+        margin-top: 40px;
+        font-weight: 500;
+    }
+
+    .atendimento-etapa p {
+        font-size: 1rem;
+        margin-top: 20px;
+        font-weight: 300;
+    }
+}

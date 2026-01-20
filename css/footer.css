@@ -146,3 +146,49 @@ footer {
 footer a:hover {
     color: var(--cor-secundaria);
 }
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 500px) {
+
+    .footer-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .footer-texto {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .footer-texto h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .footer-conteudo {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .footer-conteudo-texto {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-link-grupo {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+}

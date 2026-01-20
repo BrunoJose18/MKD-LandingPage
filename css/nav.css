@@ -64,6 +64,13 @@ nav button:hover {
     transform: scale(1.05);
 }
 
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
 
 @media (max-width: 500px) {
 
