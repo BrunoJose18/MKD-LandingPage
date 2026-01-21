@@ -275,7 +275,7 @@
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 501px) {
 
     .planos {
         margin-top: 120px;
@@ -298,6 +298,7 @@
 
     .texto-planos {
         display: flex;
+        width: 80%;
         flex-direction: column;
         text-align: center;
         padding: 60px 0px;
@@ -446,10 +447,23 @@
 
 }
 
-@media (max-width: 450px) {
+@media (max-width: 451px) {
 
     .planos {
-        height: 750px;
+        height: auto;
+        min-height: 1100px;
+    }
+
+    .texto-planos {
+        align-items: center;
+        justify-content: center;
+        padding: 60px 0;
+        gap: 20px;
+    }
+
+    .texto-planos p {
+        width: 100%;
+        max-width: 100%;
     }
 
     .cards-planos-container {
@@ -461,4 +475,14 @@
         top: -50px;
     }
 
+    .preco-container:before,
+    .preco-container:after {
+        left: 0;
+        width: 310px;
+        height: 1px;
+    }
+
+    .preco-container:before {
+        height: 2px;
+    }
 }

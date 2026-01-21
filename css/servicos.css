@@ -178,14 +178,21 @@
 
 }
 
-@media (max-width: 450px) {
+@media (max-width: 451px) {
 
     .servicos {
-        height: 750px;
+        height: auto;
+        min-height: 800px;
+        padding-bottom: 50px;
     }
 
     .cards-servicos-container {
         gap: 20px;
+    }
+
+    .cards-servicos {
+        width: 190px;
+        height: 190px;
     }
 
     .servicos::after {
