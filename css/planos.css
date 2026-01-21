@@ -478,11 +478,11 @@
     .preco-container:before,
     .preco-container:after {
         left: 0;
-        width: 310px;
+        width: 100%;
         height: 1px;
     }
 
     .preco-container:before {
-        height: 2px;
+        height: 1.4px;
     }
 }
